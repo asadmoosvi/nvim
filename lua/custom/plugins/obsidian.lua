@@ -33,6 +33,9 @@ return {
       end
       return tostring(os.time()) .. '-' .. suffix
     end,
+    ui = {
+      enable = false,
+    },
   },
   config = function(_, opts)
     require('obsidian').setup(opts)
