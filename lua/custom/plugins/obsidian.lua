@@ -34,4 +34,18 @@ return {
       return tostring(os.time()) .. '-' .. suffix
     end,
   },
+  config = function(_, opts)
+    require('obsidian').setup(opts)
+
+    -- some keybinds for common obsidian commands
+    vim.keymap.set('n', '<leader>on', '<cmd>ObsidianNew<CR>', { desc = 'Obsidian: create new note' })
+    vim.keymap.set('n', '<leader>os', '<cmd>ObsidianSearch<CR>', { desc = 'Obsidian: search vault' })
+    vim.keymap.set('n', '<leader>oq', '<cmd>ObsidianQuickSwitch<CR>', { desc = 'Obsidian: quick switch notes' })
+    vim.keymap.set('n', '<leader>ot', '<cmd>ObsidianToday<CR>', { desc = "Obsidian: open today's daily note" })
+    vim.keymap.set('n', '<leader>od', '<cmd>ObsidianDailies<CR>', { desc = 'Obsidian: open a picker with daily notes' })
+    vim.keymap.set('n', '<leader>ol', '<cmd>ObsidianLinks<CR>', { desc = 'Obsidian: collect all links within buffer' })
+    vim.keymap.set('n', '<leader>ob', '<cmd>ObsidianBacklinks<CR>', { desc = 'Obsidian: collect all backlinks within buffer' })
+    vim.keymap.set('n', '<leader>og', '<cmd>ObsidianTags<CR>', { desc = 'Obsidian: find tags' })
+    vim.keymap.set('n', '<leader>oo', '<cmd>ObsidianOpen<CR>', { desc = 'Obsidian: open note in obsidian app' })
+  end,
 }
