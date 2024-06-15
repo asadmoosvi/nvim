@@ -5,15 +5,15 @@ return {
     'nvim-lua/plenary.nvim',
   },
   cond = function()
-    local vaultsDir = vim.fn.resolve(vim.fn.expand '~/Dropbox/vaults')
+    local vaultsDir = vim.fn.resolve(vim.fn.expand '~/Dropbox/Obsidian/vaults')
     -- only load plugin if inside vaults directory
     return string.find(vim.fn.getcwd(), vaultsDir)
   end,
   opts = {
     workspaces = {
       {
-        name = 'personal',
-        path = '~/Dropbox/vaults/personal',
+        name = 'main',
+        path = '~/Dropbox/Obsidian/vaults/main',
       },
     },
     daily_notes = {
