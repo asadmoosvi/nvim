@@ -4,6 +4,11 @@ return {
   dependencies = {
     'nvim-lua/plenary.nvim',
   },
+  cond = function()
+    local vaultsDir = vim.fn.resolve(vim.fn.expand '~/Dropbox/vaults')
+    -- only load plugin if inside vaults directory
+    return string.find(vim.fn.getcwd(), vaultsDir)
+  end,
   opts = {
     workspaces = {
       {
