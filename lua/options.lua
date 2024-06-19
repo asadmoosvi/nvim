@@ -71,5 +71,3 @@ vim.opt.cinoptions = '(sw,m1,g0,:0,l1,j1,J1'
 
 -- Spell checking
 vim.opt.spell = true
-
--- vim: ts=2 sts=2 sw=2 et
