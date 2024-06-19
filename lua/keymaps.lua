@@ -83,4 +83,14 @@ vim.api.nvim_create_autocmd('TermClose', {
   command = 'stopinsert',
 })
 
+-- Set indentation settings for YAML files
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'yaml',
+  callback = function()
+    vim.opt_local.shiftwidth = 4
+    vim.opt_local.tabstop = 4
+    vim.opt_local.expandtab = true
+  end,
+})
+
 -- vim: ts=2 sts=2 sw=2 et

@@ -39,7 +39,10 @@ return {
       formatters = {
         -- # Example of using shfmt with extra args
         shfmt = {
-          prepend_args = { '-i', '2' },
+          prepend_args = { '-i', '4' },
+        },
+        prettier = {
+          prepend_args = { '--tab-width', '4' },
         },
       },
     },
