@@ -3,6 +3,6 @@
 --
 -- See the kickstart.nvim README for more information
 return {
-  -- Kitty terminal config syntax highlighting
-  'fladson/vim-kitty',
+    -- Kitty terminal config syntax highlighting
+    'fladson/vim-kitty',
 }
