@@ -24,7 +24,6 @@ return {
             dashboard.button('SPC sf', '󰱼  ❯ Search for a file'),
             dashboard.button('SPC sg', '  ❯ Search for a word'),
             dashboard.button('SPC sn', '  ❯ Search neovim config files'),
-            dashboard.button('SPC nr', '󰁯  ❯ Restore session for current directory'),
             dashboard.button('u', '󰚰  ❯ Update plugins', '<cmd>Lazy update<CR>'),
             dashboard.button('q', '  ❯ Quit neovim', '<cmd>qa<CR>'),
         }
