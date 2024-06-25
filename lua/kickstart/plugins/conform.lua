@@ -29,7 +29,7 @@ return {
                 -- Conform can also run multiple formatters sequentially
                 python = { 'isort', 'black' },
                 markdown = { 'prettier' },
-                yaml = { 'prettier' },
+                yaml = { 'yamlfmt' },
                 json = { 'prettier' },
                 sh = { 'shfmt' },
                 -- You can use a sub-list to tell conform to run *until* a formatter
@@ -43,6 +43,9 @@ return {
                 },
                 prettier = {
                     prepend_args = { '--tab-width', '4' },
+                },
+                yamlfmt = {
+                    prepend_args = { '-formatter', 'indent=4' },
                 },
             },
         },
