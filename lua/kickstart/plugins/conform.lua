@@ -45,7 +45,7 @@ return {
                     prepend_args = { '--tab-width', '4' },
                 },
                 yamlfmt = {
-                    prepend_args = { '-formatter', 'indent=4' },
+                    prepend_args = { '-formatter', 'indent=4', '-formatter', 'retain_line_breaks_single=true' },
                 },
             },
         },
