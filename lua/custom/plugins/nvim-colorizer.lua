@@ -1,4 +1,8 @@
 return {
     'NvChad/nvim-colorizer.lua',
-    opts = {},
+    config = function()
+        require('colorizer').setup {
+            filetypes = { 'html', 'css', 'javascript' },
+        }
+    end,
 }
