@@ -180,6 +180,7 @@ return {
                     },
                 },
                 emmet_language_server = {},
+                cssls = {},
             }
 
             -- Ensure the servers and tools above are installed
