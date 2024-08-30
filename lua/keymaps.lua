@@ -93,3 +93,14 @@ vim.api.nvim_create_autocmd('FileType', {
         vim.opt_local.autoindent = true
     end,
 })
+
+-- Set filetype to htmldjango if the html file is inside a templates directory.
+-- This is usually the case for flask where templates are stored in the
+-- templates directory. Filetype of htmldjango allows for additional completion
+-- that is not available with just vanilla html files.
+vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
+    pattern = '*/templates/*.html',
+    callback = function()
+        vim.bo.filetype = 'htmldjango'
+    end,
+})
