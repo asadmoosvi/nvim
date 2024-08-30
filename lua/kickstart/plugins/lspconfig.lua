@@ -202,6 +202,7 @@ return {
                 'prettier',
                 'shfmt',
                 'yamlfmt',
+                'djlint',
             })
             require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
