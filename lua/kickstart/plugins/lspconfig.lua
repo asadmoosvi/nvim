@@ -181,6 +181,8 @@ return {
                 cssls = {},
                 ts_ls = {},
                 sqls = {},
+                dockerls = {},
+                docker_compose_language_service = {},
             }
 
             -- Ensure the servers and tools above are installed
