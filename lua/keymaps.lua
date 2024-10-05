@@ -104,3 +104,9 @@ vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
         vim.bo.filetype = 'htmldjango'
     end,
 })
+
+-- Remove CSS auto formatting comments
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = 'css',
+    command = 'setlocal formatoptions-=cro',
+})
