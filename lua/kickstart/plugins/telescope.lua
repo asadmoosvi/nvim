@@ -64,7 +64,7 @@ return {
                 -- },
                 pickers = {
                     find_files = {
-                        find_command = { 'rg', '--files', '--hidden', '-g', '!.git', '-g', '!{.venv,venv}' },
+                        find_command = { 'rg', '--files', '--hidden', '-g', '!.git', '-g', '!{.venv,venv}', '-g', '!node_modules' },
                     },
                 },
                 extensions = {
