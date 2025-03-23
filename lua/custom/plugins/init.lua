@@ -5,4 +5,11 @@
 return {
     -- Kitty terminal config syntax highlighting
     'fladson/vim-kitty',
+
+    -- Better python indentation
+    'Vimjas/vim-python-pep8-indent',
+
+    -- Tim Pope's Vim Git Plugin
+    -- https://github.com/tpope/vim-fugitive
+    'tpope/vim-fugitive',
 }
