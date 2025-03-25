@@ -12,4 +12,7 @@ return {
     -- Tim Pope's Vim Git Plugin
     -- https://github.com/tpope/vim-fugitive
     'tpope/vim-fugitive',
+
+    -- This plugin adds support for editing dotfiles in the chezmoi source path.
+    'alker0/chezmoi.vim',
 }
