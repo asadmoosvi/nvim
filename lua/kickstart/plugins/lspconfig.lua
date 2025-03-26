@@ -148,7 +148,25 @@ return {
                 },
                 -- gopls = {},
 
-                pyright = {},
+                pyright = {
+                    settings = {
+                        pyright = {
+                            -- Using Ruff's import organizer
+                            disableOrganizeImports = true,
+                        },
+                        python = {
+                            analysis = {
+                                -- Ignore all files for analysis to exclusively use Ruff for linting
+                                ignore = { '*' },
+                            },
+                        },
+                    },
+                },
+                ruff = {
+                    on_attach = function(client, _)
+                        client.server_capabilities.hoverProvider = false
+                    end,
+                },
 
                 bashls = {},
                 marksman = {},
@@ -198,8 +216,6 @@ return {
             local ensure_installed = vim.tbl_keys(servers or {})
             vim.list_extend(ensure_installed, {
                 'stylua', -- Used to format Lua code
-                'isort',
-                'black',
                 'prettier',
                 'shfmt',
                 'yamlfmt',
